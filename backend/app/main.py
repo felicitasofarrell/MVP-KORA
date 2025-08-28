@@ -6,7 +6,7 @@ app = FastAPI(title="KORA MVP - Nubceo CX")
 # Configuración CORS (para que el frontend pueda llamar al backend)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # luego podés restringir al dominio del frontend
+    allow_origins=["http://localhost:5173"],  # Vite dev
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
