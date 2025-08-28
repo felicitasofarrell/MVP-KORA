@@ -1,0 +1,179 @@
+/* Avenir LT Std — pesos y estilos comunes */
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-LightOblique.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-Book.otf') format('opentype');
+  font-weight: 400;              /* Book ~ Regular */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-BookOblique.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Algunas familias traen “Roman” como Regular también */
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-Roman.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: medium;
+}
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-MediumOblique.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-Heavy.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-HeavyOblique.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-BlackOblique.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* La oblique genérica por si usás 400 italic y no cargaste BookOblique */
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-Oblique.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+.third-container {
+  display: grid;
+  grid-template-rows: 140px 1fr;                 /* alto de .primer-fila + resto */
+  grid-template-columns: 300px minmax(0, 1fr);   /* izq fija | der ocupa resto */
+  grid-template-areas:
+    "header header"
+    "left   right";
+  column-gap: 24px;                               /* separación entre columnas */
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Header arriba a lo largo */
+.primer-fila { grid-area: header; } 
+
+.back-btn-third {
+  top: 20px;
+  left: 20px;
+  padding: 8px 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+.back-btn-third:hover {
+  background: #ececec;
+}
+
+.logo-third {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.logo-img-third {
+  width: 90px;   
+  height: auto;
+}
+
+.container-izq {
+  grid-area: left;
+  width: 300px;                                   /* tu ancho fijo */
+  height: calc(100vh - 140px);                    /* todo el alto debajo del header */
+  overflow-y: auto;
+  box-sizing: border-box;
+  background-color: rgb(217, 212, 212);
+}
+
+
+.container-izq .sidebar {
+  display: flex;
+  flex-direction: column; /* uno abajo del otro */
+  align-items: stretch;
+  gap: 20px;              /* separación entre items */
+}
+
+.container-izq .sidebar-title {
+  margin-bottom: 8px;     /* espacio bajo el título */
+}
+
+.container-izq .side-pill {
+  display: block;         /* que ocupe su propia línea */
+  width: 100%;            /* que tenga todo el ancho del sidebar */
+  text-align: left;
+}
+
+.container-der {
+  grid-area: right;
+  height: calc(100vh - 140px);                    /* todo el alto debajo del header */
+  min-width: 0;                                   /* evita overflow horizontal */
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 16px 24px;
+  text-align: center;
+}
+
+.container-der .search-input {
+  flex: 1;
+  height: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  padding: 0 14px;
+  font-size: 16px;
+}
+
+.container-der .search-btn {
+  height: 100%;
+  padding: 0 16px;
+  border: 0;
+  border-left: 1px solid #cfcfcf;
+  background: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+}

@@ -1,0 +1,176 @@
+/* Avenir LT Std — pesos y estilos comunes */
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-LightOblique.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-Book.otf') format('opentype');
+  font-weight: 400;              /* Book ~ Regular */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-BookOblique.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Algunas familias traen “Roman” como Regular también */
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-Roman.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: medium;
+}
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-MediumOblique.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-Heavy.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-HeavyOblique.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-BlackOblique.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* La oblique genérica por si usás 400 italic y no cargaste BookOblique */
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('./assets/fonts/AvenirLTStd-Oblique.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+.second-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;   /* título arriba, texto abajo */
+  justify-content: center;  /* centra vertical */
+  align-items: center;      /* centra horizontal */
+  background: linear-gradient(#00a7e7, #005187);
+  font-family: 'Avenir LT Std';
+  font-style: normal;
+}
+
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 8px 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background: #ececec;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logo-img {
+  width: 90px;   
+  height: auto;
+}
+
+.top-select-wrap { margin: 8px 0 24px; position: relative; }
+
+.top-select {
+  appearance: none;
+  padding: 10px 26px;
+  border-radius: 999px;
+  border: 1px solid #0b3755;
+  background: #092b45;
+  color: #e9f1f7;
+  font-family: 'Avenir LT Std';
+  font-style: medium;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+}
+.top-select-wrap::after{
+  content:"▾";
+  position:absolute; right:12px; top:50%; transform:translateY(-50%);
+  color:#cfe6f5; pointer-events:none;
+}
+.btn-container{
+  width: 1200px;
+  max-width: 95vw;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  grid-auto-rows: 120px;         /* alto de cada celda */
+  gap: 28px 36px;                /* filas / columnas */
+  justify-items: center;         /* centra cada celda */
+  align-items: center;
+  margin-top: 50px;      
+}
+
+/* estilo común de cada bloque */
+.pill {
+  width: 260px;
+  max-width: 100%;
+  height: 90px;
+  display:flex; align-items:center; justify-content:center;
+  border-radius: 22px;
+  background: #e7e7e7;
+  color: #202020;
+  font-size: 20px;
+  font-weight: 600;
+  box-shadow: 0 8px 22px rgba(0,0,0,.15);
+  cursor: pointer;
+  user-select: none;
+  text-align:center;
+  padding: 0 14px;
+  transition: transform .08s ease, box-shadow .2s ease;
+  font-family: 'Avenir LT Std';
+  font-style: medium;
+  font-weight: 600;
+  font-size: 25px;
+}
