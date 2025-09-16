@@ -1,0 +1,152 @@
+NUBCEO CASH
+
+Link: https://cash.nubceo.com/login
+
+Esta plataforma es la que utiliza el cliente para ingresar a su cuenta y poder observar sus ingresos diarios, impuestos mensuales, liquidaciones, ventas y gastos.
+
+Desde CX utilizaremos esta página para ingresar a la cuenta del cliente y descargar el reporte ( planilla de excel), con determinado período de fecha y procesadora de pago, que necesitemos analizar.
+
+El usuario siempre será el siguiente correo espejo+tXXX@nubceo.com, al cuál solo debemos modificar el número de tenat (cliente) y la contraseña la obtendremos desde el admin panel, en el sector usuario de consulta. 
+
+Nubceo central Manager
+
+Link: https://techmgmt.internal.nubceo.com/admin/login?redirect=/content/access_request
+
+Usuario XXXX@nubceo.com
+Contraseña (debemos crear una)
+
+Esta página la utilizaremos para solicitar al equipo de tecnología los accesos a las distintas plataformas que usamos diariamente.
+
+Una vez dentro de la página, solicitaremos el permiso 
+
+Luego debemos aguardar que nos otorguen el mismo.
+Cuando el request status se encuentra en “GRATED”, esto nos confirma que ya está ok y nos enviarán a nuestra cuenta de gmail de nubceo el link para ingresar y junto con la contraseña que luego debemos modificar.
+
+Ejemplo de acceso confirmado a REDMINE:
+
+Admin panel
+
+Link: https://adminpanel.nubceo.com/login
+
+Para ingresar a la misma debemos solicitar acceso a nico.costa@nubceo.com , una vez que nos dé el alta, te llegará un correo al gmail de nubceo para que puedas restablecer tu contraseña.
+
+Esta plataforma nos permitirá realizar ciertas acciones tales como:
+
+Contraseña Nubceo
+Este apartado lo utilizaremos para blanquear la contraseña del cliente, es decir, cuando un cliente nos informa que se ha olvidado la misma o no puede ingresar al portal.
+Ponemos el número de Tenant y creamos una contraseña, ejemplo NUBCEO2024, luego damos click en actualizar y procedemos a informar al cliente. Le pedimos luego que cambie la misma por seguridad.
+
+Subscribir o cambiar el plan
+Una vez que tenemos el trato ganado o baja del contrato y tenemos el número de Tenant, nos dirigiremos para activar esa cuenta.
+
+Extender Trials
+Cuando el cliente ingresa con un período de prueba y desea extender el mismo, debemos dirigirnos al siguiente apartado, indicar número de Tenant y fecha que finalizará su prueba.
+
+Escrapeo
+Es forzar de forma manual la extracción de datos de un cliente, procesadora de pago y período determinado.
+
+También tenemos la opción de programar el escrapeo.
+
+Usuario de Consulta
+Nos permite, con el número de tenant del cliente ( buscar el mismo en la plataforma PIPE, si no te lo acuerdas), obtener una contraseña que se envía a tu correo de gmail de Nubceo y así entrar a la cuenta espejo en la plataforma NUBCEO CASH.
+
+ACCIONES -> USUARIO DE CONSULTA
+
+Te debe de llegar un correo como el siguiente al gmail personal de Nubceo.
+
+Desbloquear usuario de consulta
+Cuando un cliente nos contactó porque no puede ingresar a su plataforma, debemos de solicitarle el correo que utiliza para ingresar.
+
+Ingresamos el correo en el siguiente casillero y nos figura luego información tal como su número de Tenat.
+
+Hacemos click en actualizar.
+Luego le consultamos al cliente si desea que le blanqueamos la contraseña.
+De ser un sí, nos dirigimos a la pestaña Contraseña Nubceo (explicación más arriba).
+sdPipedrive
+
+Link: 
+https://nubceo.pipedrive.com/auth/login
+
+Usuario: al@nubceo.com
+Contraseña: NUBCEO2024
+
+Este CRM lo utilizaremos para:
+
+Buscar el número de tenant del cliente en caso de que no lo recordemos.
+Ingresar al tenant del cliente y dejar información asentada en cada oportunidad que nos comuniquemos con el mismo.
+
+En la siguiente imagen podrán observar que por ejemplo, no se recordaba el número de tenant del cliente “Yaguar”, por lo que se ha escrito la palabra en el buscador.
+El tenant es el NÚMERO que figura en el recuadro rojo, siempre se encuentra del lado izquierdo del nombre del cliente y debe tener la etiqueta de GANADO.
+
+Al ingresar podemos ver en detalle la información del cliente.
+
+En la parte de NOTAS, debemos de poner nuestras iniciales (nombre - apellido), y a continuación escribir un breve resumen de la problemática que nos ha comunicado el cliente vía correo electrónico y/o whatsapp, o problemas que hemos detectado al realizar el análisis de información semanal. Esto se debe realizar cada vez que tenemos contacto con el mismo.
+
+Zendesk
+
+Link: https://nubceosupporthelp.zendesk.com/agent/dashboard 
+
+*Imagen general sobre cómo se ve al iniciar sesión.
+
+Utilizaremos esta plataforma para generar un reporte sobre una problemática puntual, previo análisis realizado (buscar la pestaña con explicación correspondiente en FUNCIONES CX -> TAREAS A REALIZAR -> PROCEDIMIENTO -> REPORTE)
+
+Este reporte pasará al equipo de QA y/o DEV, quienes evaluarán la misma.
+
+Para completar el reporte debemos dirigirnos a la pestaña de REDMINE.
+
+Como armar reporte en Zendesk
+Una vez que ingresamos a la plataforma, debemos armar el ticket en Zendesk.
+Esto se hace en dos pasos ya que solo Redmaine nos permite adjuntar imágenes y archivos.
+
+Datos a completar sobre el margen izquierdo
+
+Solicitante: colocar el Número de T y elegir uno de los contactos que figuran al desplegarse ( es igual elegir cualquiera) 
+
+Agente Asignado
+
+Prioridad y Número de Tenant: en prioridad se coloca la opción que corresponda de acuerdo a la urgencia de resolución del problema. En Tipo siempre ponemos PROBLEMA.
+
+From Customer: se tilda si el cliente está haciendo algún tipo de reclamo
+
+Plataforma: elegir la plataforma que se está reportando
+
+Reportado por: elegir la opción que corresponde. Por lo general cuando es Control preventivo se coloca Team CX, pero si es From Customer se coloca Cliente
+
+País: seleccionar el país al que pertenece el Tenant.
+
+Estado en Redmine: siempre tildar NEW porque de lo contrario no viajará el ticket a Redmine.
+
+Usuario: seleccionar el nombre de quien reporta
+
+Modelo de título
+
+ATENCIÓN!! SIEMPRE COLOCAR NOTA INTERNA, de lo contrario se le enviará el reporte de error al cliente.
+
+A continuación se copia el reporte respetando la plantilla y asegurándose de completar todos los datos que solicita.
+Por último enviar como EN ESPERA para que envíe el ticket a Redmine , de lo contrario no migrara.
+
+Plantilla de Reporte de Zendesk
+En el recuadro de NOTA INTERNA, utilizamos la siguiente plantilla a completar.
+Redmine
+
+Link: https://redmine.internal.nubceo.com/login?back_url=https%3A%2F%2Fredmine.internal.nubceo.com%2Fmy%2Fpage
+
+Usuario XXXX@nubceo.com
+Contraseña (debemos crear una)
+
+Una vez que hayamos solicitado en Nubceo central Manager el acceso, nos enviarán un correo electrónico al gmail de nubceo personal, donde nos otorgan nombre de usuario y contraseña, ésta última debemos modificarla.
+
+Redmine la utilizaremos como complemento de ZENDESK para adjuntar archivos e imágenes correspondientes al REPORTE que hemos iniciado en la plataforma recientemente mencionada.
+
+IMPORTANTE : Requerimientos de cada tipo de tarea 
+
+https://redmine.internal.nubceo.com/projects/nubceo-client/wiki/Requerimentos_de_cada_tipo_de_tarea_de_Redmine
+Discord
+
+Link: https://discord.com/
+
+Debes crear un usuario y contraseña con tu correo personal ( no de nubceo).
+
+Utilizamos esta aplicación para comunicarnos entre empleados de la empresa.
+
+Existen células de grupos específicos que utilizamos para comunicarnos con todos los equipos y nos ayuda a resolver consultas e intercambiar información.

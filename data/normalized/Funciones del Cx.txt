@@ -1,0 +1,285 @@
+GESTIÓN DE CONSULTA
+
+Responder preguntas, aclarar dudas, gestionar solicitudes de información de producto.
+
+Cada integrante de Cx tiene a cargo un grupo de clientes de los cuales oficia de “ ejecutivo de cuentas “, siendo responsables del seguimiento durante el mes de resolver consultas y dudas, detectar diferencias/ problemas que afecten a uno o más de los clientes a cargo, comunicar cambios, mejoras o peticiones de cambios de conexión y/o contraseñas , gestionar reuniones, capacitaciones y vinculaciones de nuevos medios de pagos.
+También tendrá a cargo el seguimiento de la gestión de tickets de cada usuario y posterior comunicación una vez resuelto el mismo.
+Será responsabilidad de Cx mantener actualizados los manuales de uso de las diferentes plataformas de consultas, como también de desarrollar manuales de nuevas plataformas que se incorporen y de mantener permanente comunicación con el equipo de desarrollo y tecnología para mantenerse informado de los cambios en el producto y para informar cambios de comportamiento que se detecten en las procesadoras de pago.
+El equipo de Cx determina cada trimestre un listado de grandes cuentas que deben tener un seguimiento periodico y que se toman de referencia para evaluar los problemas recurrentes de uso, problemas recurrentes de conexión , problemas recurrentes de diferencias por plataformas.
+
+Puesta en marcha 
+
+Tenemos dos opciones CON o SIN IMPLEMENTACIÓN.
+Plan que se le asigna a los clientes de cada país cuando se dan las altas de clientes:
+ Argentina: Siempre son Cash Delivery 
+Uruguay: Siempre son Cash Comercio SALVO que tenga Peya y/o Rappi, entonces es Cash Delivery 
+
+Sin implementación
+
+Cuando ingrese un nuevo cliente y el equipo comercial considere de pocas sucursales o transacciones, se enviará un mail al líder de CX bajo el título PUESTA EN MARCHA. 
+
+Éste derivará el mismo al equipo para comenzar el proceso de vinculación que se realizará entre el cliente, vendedor e integrante de cx.
+Una vez realizada la vinculación, se coordinará una próxima reunión de capacitación en la que se hará un repaso por todas las funcionalidades del producto y donde el usuario tendrá espacio para plantear dudas. Luego el cliente tendrá los canales habituales de consulta vía mail o wapp.
+
+Nuevo Cliente -> TRATO GANADO
+
+Aclaración: cuando un cliente entra en período de prueba (trial/período de prueba de 7 días) los vendedores le crean una cuenta en nubceo, y esa cuenta en nubceo está asociada a la plataforma Pipe, por lo que automáticamente se crea un nuevo trato, pero el mismo NO ESTÁ GANADO.
+
+Cuando el cliente decide contratar nubceo, el vendedor se dirige a la plataforma de Pipe y lo convierte en GANADO.
+
+Una vez que ese cliente pasa a estar ganado, nos va a llegar este mail que dice TRATO GANADO y con un número de tenant asignado
+
+¡Importante! NO confundir con este correo de NUEVO TRATO, ya que este correo es el que llega cuando el cliente se registra en Nubceo o el vendedor crea el trato en la plataforma Pipe.
+
+Una vez que tenemos el trato ganado y tenemos el número de Tenant, nos dirigiremos a la plataforma de Admin para activar esa cuenta
+
+Acciones > suscribir o cambiar plan > ponemos el Tenant > aplicamos el plan que corresponda a cada país (el plan que le corresponde a cada país ya está pineado en el chat) > ponemos actualizar y listo.
+
+Para dar de BAJA es exactamente lo mismo el procedimiento de Admin. 
+Una vez que tenemos el OK de Castosa, nos dirigimos al
+
+Admin > acciones > suscribir o cambiar plan > ponemos el Tenant > Aplican CASH CANCELLED y listo.
+
+¡Buen día! 
+Envío la siguiente solicitud de baja
+
+Tenant:
+Cliente: 
+País: Argentina 
+Plan: Local: 
+Última factura: Deuda pendiente: 
+Fecha de ganado: 
+Fecha de solicitud de Baja:
+ Vendedor: 
+Motivo: 
+Observaciones: 
+Contacto (Nombre y teléfono): 
+Mail: 
+
+¡Saludos!
+
+Con implementación
+
+Cuando ingrese un nuevo cliente y el equipo comercial haya cobrado el servicio de implementación, se enviará un mail al líder de CX bajo el título IMPLEMENTACIÓN.
+
+Éste derivará el mismo al implementador externo, quien comenzara el proceso de OnBoarding coordinando las distintas reuniones con el cliente y el vendedor; en un inicio, se acordará entre las partes y de acuerdo a las necesidades del cliente, los días y horarios en los que se realizaran la vinculación y las dos etapas de capacitación. 
+Para dicho proceso se abre una agenda, que será monitoreada por el implementador.
+
+EJEMPLO DE CORREO,, luego de tener una primera reunión en donde se le consulta al cliente que procesadoras desean vincular.
+
+Buenas tardes XXX,
+
+¡Espero que se encuentren muy bien!
+
+Cómo conversamos previamente en la reunión, procedo a compartirles la información que deben de solicitar a cada plataforma para la posterior vinculación.
+
+FISERV: ( Ya solicitado a la ejecutiva de cuenta) Deben indicarle a la procesadora que desean recibir la información de su cuenta mediante el SFTP o SFG. Para esto, deberán pedirles que les envíen los siguientes datos:
+USUARIO (diferente al del portal)
+CONTRASEÑA (diferente al del portal)
+ ARCHIVO PPK
+Una vez que les envíen el correo con usuario, contraseña y archivo PPK adjunto, nos lo reenvían al correo de team.cx@nubceo.com y nosotros procedemos con la vinculación.
+
+PAYWAY/PRISMA: se requiere
+USUARIO 
+CONTRASEÑA 
+
+MERCADO PAGO: se requiere
+USUARIO 
+CONTRASEÑA 
+
+AMEX: En cuanto a la conexión por SFTP de AMEX, tienen que contactarse vía mail con la procesadora, o si poseen ejecutivo de cuentas pueden solicitarlo el acceso a conexión SFTP, versión GRRCN 4. con copia a team.cx@nubceo.com
+
+La procesadora misma les enviará usuario y contraseña.
+También les solicitarán completar un formulario para poder brindarles el SFTP, del que les dejo algunas instrucciones a la hora de completarlo, ya que piden información que debemos brindarles nosotros.
+
+Empresa conciliadora: Colocar OTROS (nubceo).
+Formato de archivo: Marcar TAB.
+Protocolo de comunicación: Marcar SFTP, GRRNC 4.0
+
+Una vez completado y enviado el formulario a la procesadora, ellos les harán llegar los datos de acceso al SFTP.
+Les dejo el mail de contacto de AMEX: servicioaclientesamex@aexp.com 
+
+NARANJA: Deberías indicarle a Naranja que deseas recibir los archivos por medio de STA en este portal https://secure.tarjetanaranja.com.ar/sta/cgi-bin/sta.cgi?session-task=30 , y ellos te van a brindar las credenciales necesarias para acceder al STA.
+También deben solicitarle que les guarden los archivos de conciliaciones, los cuales se van a disponibilizar en archivos CSV.
+
+---
+
+Por otro lado les informo en qué consiste el proceso de implementación, el mismo está compuesto por dos instancias:
+
+La primera es la vinculación: En esta instancia, nos reunimos en una videollamada de aproximadamente 30 minutos, donde creamos la razón social y vinculamos las procesadoras de pago. Para esta reunión, es importante que tengan a mano todas las claves de acceso de las plataformas que utilizan. No es necesario que todos los usuarios que vayan a utilizar Nubceo estén presentes en este encuentro, basta con que participe la persona encargada de gestionar los medios de pago y tenga acceso a estos.
+
+La segunda es la capacitación: En esta instancia, hacemos un recorrido completo por la plataforma y revisaremos los reportes de excel qué tenemos disponibles. Para esta reunión, si es necesario que asistan todos los usuarios que utilizarán la plataforma. Recomendamos realizar las reuniones por separado para evitar sobrecargarles con demasiada información en un solo día.
+
+Les comparto mi disponibilidad de esta semana y la próxima semana para poder agendar ambas reuniones:
+
+Lunes 11 am / 12 pm
+Martes 11am /12 pm
+
+Quedo a la espera de su respuesta.
+Saludos cordiales,
+Procedimiento
+
+Control de liquidaciones- Ventas- Impuestos y Comisiones
+
+El control preventivo de datos consta de algunos paso que hay que cumplir , teniendo en cuenta que 1 no es excluyente del otro:
+
+Paso 1: CONTROL NUBCEO VS NUBCEO
+
+Ingresamos a la cuenta espejo del cliente con usuario y contraseña.
+
+Nos dirigimos a la pestaña de LIQUIDACIONES y luego hacemos click en VER FILTROS.
+
+Luego elegimos la PLATAFORMA analizar, el PERÍODO DE FECHA y hacemos click en aplicar filtros.
+
+Seleccionamos DESCARGAR EXCEL y elegimos la opción INCLUIR VENTAS.
+
+Luego nos dirigimos a la pestaña REPORTES --> SOLICITUDES
+
+Cuando se complete la descarga, podremos descargar el EXCEL y comenzaremos con el análisis de datos.
+
+Descargamos excel, aplicamos la macro:
+
+Click en programador
+
+Click en Visual basic
+
+Click en Archivo -> Importar archivo (previamente descargado el archivo de macro, solicitar el mismo)
+
+Click en ejecutar macro
+
+Se nos abrirá una pestaña llamada Análisis que nos brindará una primera impresión sobre la problemática o no, que debemos abordar.
+
+Luego ya en el EXCEL, en la solapa LIQUIDACIONES, agregamos una columna para comprobar que:
+
+ Bruto - Impuestos- Descuentos - Neto = Cero
+
+ Luego debemos, sumar la columna Monto Bruto de la solapa de liquidaciones y comparar con el Monto Bruto de la solapa ventas, para verificar que el valor sea el mismo.
+
+ Realizar la misma comprobación de montos de impuestos y deducciones y de montos netos, si se descargo la solapa de cobros ( esto no sucede con todas las plataformas).
+
+En el caso de que coincidan todos los montos, el control de Nubceo vs Nubceo quedara ok .
+
+De no coincidir uno o varios montos se deberá investigar los motivos de dichas diferencias.
+
+Por ejemplo faltante de ventas , de contracargos/ devoluciones, ventas o impuestos duplicados, diferencias de signos, etc..
+
+Para ellos se deberá, por un lado identificar la o las liquidaciones con diferencias para luego buscar en la plataforma correspondiente el archivo que nos indique cual es el motivo de dicha faltante o diferencia.
+
+Para esto abrimos otra solapa en el mismo excel y realizaremos una tabla dinámica en donde comparemos (ID Liquidación y Monto Bruto de la solapa liquidación contra Liquidación ID y Monto Bruto de la solapa ventas)
+
+Luego restamos monto bruto de liquidaciones contra monto bruto de ventas, si la LIQUIDACIÓN corresponde a esa VENTA el valor será CERO, de lo contrario NO se podrá restar y la marcaremos con color.
+
+El próximo paso será verificar el NÚMERO DE LIQUIDACIÓN en la pestaña liquidación y ventas por medio de los filtros y podemos observar por ejemplo si una liquidación no posee venta:
+
+Ejemplo de control 1 Nubceo vs Nubceo
+
+LIQUIDACIONES
+
+VENTAS
+
+Paso 2: CONTROL NUBCEO VS PLATAFORMAS DE PAGO
+
+Ir a solapa PROCESADORAS DE PAGO, allí hay información detallada de cada una.
+
+Paso 3: SINCRONIZAR 
+
+Una vez realizados los controles de nubceo vs nubceo y nubceo vs plataforma, de haber encontrado diferencias, por ejemplo de cantidad de liquidaciones, cantidad de ventas, diferencias de signos, etc, se podrá realizar sincronización desde Admin Panel. 
+
+Se debe ingresar el número de Tenant, seleccionar la plataforma según la pec que corresponda y luego el periodo a sincronizar.
+
+MUY IMPORTANTE: según cada plataforma, se debe colocar un periodo corto de sync según fecha de liquidación, pero en otros casos según fecha de ventas. 
+
+Paso 4: REALIZAR REPORTE
+
+En cualquier caso que se comprobara que existen diferencias y se obtengan las pruebas, se deberá registrar las mismas a través de Zendesk y Redmine para enviar el ticket a QA/tecnología para su posterior análisis y corrección.
+
+Para zendesk se utiliza un usuario común al equipo de CX y para Redmine, cada integrante lo hará con su usuario y contraseña. (VER SOLAPA PLATAFORMAS).
+
+Como armar reporte en Zendesk
+Una vez que ingresamos a la plataforma, debemos armar el ticket en Zendesk.
+Esto se hace en dos pasos ya que solo Redmaine nos permite adjuntar imágenes y archivos.
+
+Datos a completar sobre el margen izquierdo
+
+Solicitante: colocar el Número de T y elegir uno de los contactos que figuran al desplegarse ( es igual elegir cualquiera) 
+
+Agente Asignado
+
+Prioridad y Número de Tenant: en prioridad se coloca la opción que corresponda de acuerdo a la urgencia de resolución del problema. En Tipo siempre ponemos PROBLEMA.
+
+From Customer: se tilda si el cliente está haciendo algún tipo de reclamo
+
+Plataforma: elegir la plataforma que se está reportando
+
+Reportado por: elegir la opción que corresponde. Por lo general cuando es Control preventivo se coloca Team CX, pero si es From Customer se coloca Cliente
+
+País: seleccionar el país al que pertenece el Tenant.
+
+Estado en Redmine: siempre tildar NEW porque de lo contrario no viajará el ticket a Redmine.
+
+Usuario: seleccionar el nombre de quien reporta
+
+Modelo de título
+
+NUMERO DE PEC- PROBLEMA - PLATAFORMA
+
+ATENCIÓN!! SIEMPRE COLOCAR NOTA INTERNA, de lo contrario se le enviará el reporte de error al cliente.
+
+A continuación se copia el reporte respetando la plantilla y asegurándose de completar todos los datos que solicita.
+Por último enviar como EN ESPERA para que envíe el ticket a Redmine , de lo contrario no migrara.
+
+Plantilla de Reporte de Zendesk
+En el recuadro de NOTA INTERNA, utilizamos la siguiente plantilla a completar.
+Descripción: 
+
+Período analizado/reportado: 
+Información contra la que se comparó:.
+Horario/fecha de revisión: 
+Pec/Empresa: 
+Evidencia (nubceo vs portal, archivo y capturas) / ID's útiles:
+
+Modelo de mail
+
+Al enviar el mail se debe obligatoriamente completar los datos de la plantilla, especificando cual es el error que se encuentra, el periodo, el número de PEC sobre la que se detecta el error.
+
+En este punto MUY IMPORTANTE no saltear el dato y NO CONFUNDIR el número de PEC con el Número de Tenant. 
+
+EJEMPLO DE REPORTE CORRECTO
+
+Descripción: Se descarga el excel de liquidaciones de Nubceo, al comparar el monto bruto de liquidaciones contra el monto bruto se encuentran diferencias. 
+Las diferencias encontradas se deben a que hay liquidaciones que no traen ventas y otras que tienen ventas pero no traen todas. 
+
+Monto bruto liquidaciones --> $1.194.502.759,17
+Monto bruto ventas --> $1.128.122.731,97
+Diferencia entre montos --> $66.380.027,2
+
+Período analizado/reportado: 27/01 - 06/02 
+Información contra la que se comparó: Excel de liquidaciones de Nubceo, solapa de liquidaciones contra la solapa de ventas.
+Horario/fecha de revisión: 15/02/2024 17:30 Hs
+Pec/Empresa: 97582 (Número de T 99595)
+Evidencia (nubceo vs portal, archivo y capturas) / ID's útiles:
+
+Se adjunta excel de liquidaciones de Nubceo con una solapa nombrada "Tablas Dinámicas" en la cual se encuentran dos tablas dinámicas que comparan el monto bruto de liquidaciones contra el monto bruto de las ventas. A la derecha de ambas tablas se encuentran dos cuadros. Uno de ellos rejunta todas las liquidaciones que tienen diferencias y el otro rejunta todas las liquidaciones que no traen ventas. 
+
+Se adjuntan comprobantes de pago de ejemplo 
+Se adjuntan capturas de pantalla 
+
+Cómo adjuntar archivos desde Redmine
+
+Una vez realizado los pasos en Zendesk, se pasará a buscar el ticket en REDMINE, desde donde podremos modificarlo y así agregar imágenes y archivos de prueba del problema reportado.
+
+Al tocar en el Support que cargamos en Zendesk, nos va a abrir el ticket para que podamos agregar archivos e imágenes; para eso hay que clickear en Modificar
+
+Si bajamos nos va a aparecer este recuadro para agregar algo de información y abajo la opción agregar archivo.
+Una vez que agregamos los archivos de prueba vamos a colocar aceptar y ya queda el Support disponible para que lo analicen en tecnología.
+
+PUNTOS A COMPLETAR EN REDMINE AL CARGAR UN SUPPORT
+
+Cargar sin excepción: 
+
+Asignarse el Sup en donde dice Asignado a ; a partir de ahora cada uno que cargue un supp deberá asignarse el mismo para poder recibir las notificaciones cuando haya algún cambio 
+Deben cargar la Versión Prevista : la misma irá acorde a la versión de Sprint que esté en curso al momento de cargar el supp
+Marcar en caso de que sea From Customer o From Preventive Analysis.
+Registrar el Tiempo dedicado al análisis que ocasionó ese supp
+Cargar el número de Tenant en el casillero destinado a este fin , al margen de que el número de T figure en el título
+En la sección Bug siempre debemos dejar NO

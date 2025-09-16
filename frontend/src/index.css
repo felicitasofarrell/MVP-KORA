@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("./assets/Avenir Font Family/AvenirLTStd-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("./assets/Avenir Font Family/AvenirLTStd-Medium.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("./assets/Avenir Font Family/AvenirLTStd-Black.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* === Reset + base ================================ */
+:root{
+  --ink-900:#0b1b2b;
+  --ink-700:#35495d;
+  --ink-500:#6b7c8f;
+  --surface:#ffffff;
+  --surface-alt:#f5f7fb;
+  --kora:#0b5cff;
+  --me:#e9f2ff;
+  --you:#ffffff;
+  --brd:#e4e9f1;
+  --radius:16px;
+}
+
+*{ box-sizing: border-box; }
+
+html, body, #root{
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  font-family: "Avenir LT Std", sans-serif;
+  color: var(--ink-900);
+  background: var(--surface);
+}

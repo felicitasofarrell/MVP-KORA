@@ -1,0 +1,41 @@
+/* el contenedor ocupa toda la pantalla */
+.container {
+  width: 100vw;               
+  height: 100vh;              
+  display: flex;
+  justify-content: center;    
+  align-items: center;        
+  background-size: cover;
+  background-position: center;
+}
+
+/* animación suave de fade + zoom */
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.95); /* muy leve reducción */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.logos-principal {
+  display: flex;
+  align-items: center;       
+  gap: 40px;                 
+}
+
+.logos {
+  height: 90px;              
+  object-fit: contain;
+  animation: fadeZoom 1.5s ease-out forwards; /* más lenta y suave */
+}
+
+.x-symbol {
+  font-size: 48px;
+  font-weight: bold;
+  color: #303030;
+  animation: fadeZoom 1.5s ease-out forwards; /* misma animación */
+}
