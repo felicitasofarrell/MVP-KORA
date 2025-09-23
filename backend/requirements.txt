@@ -10,3 +10,4 @@ python-docx==1.1.2
 pypdf==4.3.1
 numpy==1.26.4
 tiktoken==0.7.0
+mss>=9.0.1
