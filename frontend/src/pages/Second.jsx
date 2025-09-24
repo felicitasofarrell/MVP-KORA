@@ -189,8 +189,8 @@ export default function Second() {
 
         <div className="hero-actions">
           <button className="cta" onClick={() => goToChat("all")}>Chatear</button>
-          <button className="cta" onClick={() => navigate("/upload")}>📁 Subir Archivos</button>
-          <button className="cta" onClick={() => navigate("/storage")}>📂 Ver Archivos</button>
+          <button className="cta" onClick={() => navigate("/upload")}>Transferir Conocimiento</button>
+          <button className="cta" onClick={() => navigate("/storage")}>Administrar Datos</button>
           <input
             type="text"
             className="search-bar"
