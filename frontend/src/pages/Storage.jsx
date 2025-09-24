@@ -345,7 +345,7 @@ export default function Storage() {
             className="btn btn-primary"
             onClick={() => navigate('/upload')}
           >
-            📁 Subir Archivos
+            Subir Archivos
           </button>
         </div>
       </header>
