@@ -182,3 +182,27 @@ def ask(req: AskRequest):
     except Exception as e:
         print("[ASK][ERROR] LLM:", e)
         raise HTTPException(status_code=500, detail=f"generation failed: {type(e).__name__}: {e}")
+
+from fastapi import BackgroundTasks
+import time
+import mss
+import mss.tools
+from pathlib import Path
+
+SAVE_DIR = Path("C:/Users/camila/Desktop/MVP-KORA-main/capt_img_kora")
+SAVE_DIR.mkdir(parents=True, exist_ok=True)
+
+def take_screenshots(n: int = 3, delay: int = 5):
+    with mss.mss() as sct:
+        monitor = sct.monitors[1]  # pantalla principal
+        for i in range(n):
+            ts = time.strftime("%Y%m%d-%H%M%S")
+            filename = SAVE_DIR / f"kora-capture-{ts}-{i+1}.png"
+            img = sct.grab(monitor)
+            mss.tools.to_png(img.rgb, img.size, output=str(filename))
+            time.sleep(delay)
+
+@app.post("/screenshot")
+def screenshot(background_tasks: BackgroundTasks):
+    background_tasks.add_task(take_screenshots, 3, 5)  # 3 capturas, 5s entre cada una
+    return {"status": "ok", "path": str(SAVE_DIR)}

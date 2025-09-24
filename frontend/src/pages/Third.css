@@ -253,3 +253,10 @@ html, body, #root { height: 100%; }
     padding: 12px 16px 8px;
   }
 }
+.seed-img {
+  max-width: 500px;
+  height:250px;
+  border-radius: 8px;
+  margin-top: 8px;
+  display: block;
+}
