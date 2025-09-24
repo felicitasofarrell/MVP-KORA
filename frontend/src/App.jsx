@@ -7,6 +7,7 @@ import background from "./assets/background_a.png";
 
 import Second from "./pages/Second.jsx";
 import Third from "./pages/Third.jsx";
+import Upload from "./pages/Upload.jsx";
 
 function Home() {
   const navigate = useNavigate();
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/second" element={<Second />} />
         <Route path="/third" element={<Third />} />
+        <Route path="/upload" element={<Upload />} />
       </Routes>
     </BrowserRouter>
   );

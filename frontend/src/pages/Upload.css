@@ -1,0 +1,427 @@
+/* Upload.css - Following the existing design system */
+
+/* Import the same CSS variables from Second.css */
+:root {
+  --kora-deep:   #013459; /* Pantone 540 C */
+  --kora-prim:   #005187; /* Pantone 7692 C */
+  --kora-accent: #00a7e7; /* Pantone 2995 C */
+  --ink-900:     #303030; /* Gris institucional */
+  --surface:     #ffffff;
+  --surface-alt: #f8f9fb;
+  --border:      #e0e5eb;
+  --radius:      14px;
+}
+
+/* Import Avenir fonts */
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("../assets/Avenir LT Std/Avenir LT Std 45 Book.otf") format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("../assets/Avenir LT Std/Avenir LT Std 65 Medium.otf") format("opentype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("../assets/Avenir LT Std/Avenir LT Std 85 Heavy.otf") format("opentype");
+  font-weight: 700;
+}
+
+/* Main layout */
+.upload-root {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  color: var(--ink-900);
+  font-family: "Avenir LT Std", Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* Header */
+.upload-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+  background-color: var(--kora-deep);
+  height: 64px;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.upload-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.upload-header .brand img {
+  height: 36px;
+  object-fit: contain;
+}
+
+.upload-header h1 {
+  color: var(--surface);
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: var(--surface);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main container */
+.upload-container {
+  flex: 1;
+  padding: 32px 20px;
+  overflow-y: auto;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Upload zone */
+.upload-zone {
+  border: 3px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 48px 32px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: var(--surface-alt);
+  margin-bottom: 24px;
+}
+
+.upload-zone:hover {
+  border-color: var(--kora-accent);
+  background: #f0f8ff;
+}
+
+.upload-zone.drag-over {
+  border-color: var(--kora-accent);
+  background: #e6f3ff;
+  border-style: solid;
+  transform: scale(1.02);
+}
+
+.upload-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.upload-zone h3 {
+  color: var(--kora-deep);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.upload-zone p {
+  color: var(--ink-900);
+  margin: 8px 0;
+  font-weight: 400;
+}
+
+.upload-specs {
+  font-size: 14px;
+  color: #666;
+  margin-top: 16px !important;
+}
+
+/* Messages */
+.message {
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.error-message {
+  background-color: #fee;
+  color: #c53030;
+  border: 1px solid #feb2b2;
+}
+
+.success-message {
+  background-color: #f0fff4;
+  color: #22543d;
+  border: 1px solid #9ae6b4;
+}
+
+/* Files sections */
+.files-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.section-header h3 {
+  color: var(--kora-deep);
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+}
+
+.section-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: var(--kora-deep);
+  color: var(--surface);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--kora-accent);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: var(--surface-alt);
+  color: var(--ink-900);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--border);
+}
+
+.btn-remove {
+  background: #fee;
+  color: #c53030;
+  border: 1px solid #feb2b2;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.btn-remove:hover {
+  background: #fed7d7;
+}
+
+.btn-link {
+  background: none;
+  color: var(--kora-accent);
+  border: 1px solid var(--kora-accent);
+}
+
+.btn-link:hover {
+  background: var(--kora-accent);
+  color: var(--surface);
+}
+
+/* Files list */
+.files-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: var(--surface-alt);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  gap: 16px;
+}
+
+.file-item.uploaded {
+  background: #f0fff4;
+  border-color: #9ae6b4;
+}
+
+.file-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.file-name {
+  font-weight: 500;
+  color: var(--ink-900);
+  margin-bottom: 4px;
+  word-break: break-word;
+}
+
+.file-details {
+  font-size: 12px;
+  color: #666;
+}
+
+.file-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Progress bar */
+.progress-bar {
+  position: relative;
+  width: 120px;
+  height: 24px;
+  background: var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--kora-accent);
+  transition: width 0.3s ease;
+  border-radius: 12px;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-900);
+}
+
+/* Help section */
+.help-section {
+  background: var(--surface-alt);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-top: 24px;
+}
+
+.help-section h4 {
+  color: var(--kora-deep);
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.help-section ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--ink-900);
+}
+
+.help-section li {
+  margin-bottom: 4px;
+  font-weight: 400;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .upload-container {
+    padding: 20px 16px;
+  }
+  
+  .upload-zone {
+    padding: 32px 20px;
+  }
+  
+  .upload-header {
+    padding: 8px 16px;
+  }
+  
+  .upload-header h1 {
+    font-size: 20px;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .section-actions {
+    justify-content: stretch;
+  }
+  
+  .btn {
+    flex: 1;
+  }
+  
+  .file-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .file-actions {
+    justify-content: stretch;
+  }
+  
+  .progress-bar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .upload-zone h3 {
+    font-size: 18px;
+  }
+  
+  .upload-zone p {
+    font-size: 14px;
+  }
+  
+  .upload-specs {
+    font-size: 12px;
+  }
+}
