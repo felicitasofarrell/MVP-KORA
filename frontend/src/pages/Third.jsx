@@ -18,7 +18,6 @@ const CATEGORIES = [
   { key: "otros", label: "Otros" },
 ];
 
-// Mensaje de bienvenida por defecto
 const WELCOME_MSG = {
   role: "assistant",
   text:
@@ -26,11 +25,18 @@ const WELCOME_MSG = {
     "Elegí una categoría a la izquierda o escribime tu pregunta.",
 };
 
+// 👉 Helper para formatear markdown a HTML simple
+function formatText(text) {
+  if (!text) return "";
+  return text
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>") // **negrita** → <strong>
+    .replace(/^- /gm, "• ");                          // - item → • item
+}
+
 export default function Third() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // ── Params de URL ─────────────────────────────────────────────────────────────
   const urlParams = useMemo(() => new URLSearchParams(location.search), [location.search]);
 
   const selectedRole = useMemo(() => {
@@ -39,7 +45,6 @@ export default function Third() {
 
   const initialCat = useMemo(() => {
     const c = urlParams.get("cat");
-    // null => "Todas"; "plantillas" => Plantillas Excel; cualquier otro key válido también sirve
     return !c || c === "all" ? null : c;
   }, [urlParams]);
 
@@ -47,13 +52,9 @@ export default function Third() {
   const seedImg = useMemo(() => urlParams.get("seedImg") || "", [urlParams]);
   const hideWelcome = useMemo(() => urlParams.get("hideWelcome") === "1", [urlParams]);
 
-  // ── Estado principal ─────────────────────────────────────────────────────────
   const [selectedCategory, setSelectedCategory] = useState(initialCat);
-
-  // messagesByCat: { [categoryKey|null]: Array<{role, text, image?}> }
   const [messagesByCat, setMessagesByCat] = useState(() => {
     const key = initialCat ?? null;
-    // Si venimos con seed y hideWelcome=1, NO agregamos el welcome
     if (seed) {
       const first = hideWelcome ? [] : [WELCOME_MSG];
       return {
@@ -63,7 +64,6 @@ export default function Third() {
         ],
       };
     }
-    // Sin seed: default welcome en la categoría inicial
     return { [key]: [WELCOME_MSG] };
   });
 
@@ -72,24 +72,20 @@ export default function Third() {
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState("");
 
-  // Si cambia la categoría por botón lateral y no existe historial, crealo
   useEffect(() => {
     const key = selectedCategory ?? null;
     setMessagesByCat((prev) => {
       if (prev.hasOwnProperty(key)) return prev;
-      // Cuando navegás manualmente a otra categoría, ahí sí mostramos el welcome
       return { ...prev, [key]: [WELCOME_MSG] };
     });
   }, [selectedCategory]);
 
-  // Auto-scroll al final cuando llegan mensajes nuevos
   useEffect(() => {
     if (messagesRef.current) {
       messagesRef.current.scrollTop = messagesRef.current.scrollHeight;
     }
   }, [messagesByCat, selectedCategory, loading]);
 
-  // Helper para agregar mensajes a una categoría
   function addMessageToCategory(cat, msg) {
     const key = cat ?? null;
     setMessagesByCat((prev) => {
@@ -166,9 +162,7 @@ export default function Third() {
         {CATEGORIES.map((c) => (
           <button
             key={c.key ?? "all"}
-            className={`side-pill ${
-              (c.key || null) === (selectedCategory || null) ? "active" : ""
-            }`}
+            className={`side-pill ${(c.key || null) === (selectedCategory || null) ? "active" : ""}`}
             onClick={() => setSelectedCategory(c.key)}
           >
             {c.label}
@@ -181,15 +175,12 @@ export default function Third() {
         <div className="messages" ref={messagesRef}>
           {(messagesByCat[selectedCategory ?? null] || []).map((m, i) => (
             <div key={i} className={`msg ${m.role}`}>
-              {m.image && (
-                <img
-                  className="msg-image"
-                  src={m.image}
-                  alt="Adjunto"
-                  loading="lazy"
-                />
+              {m.text && (
+                <div dangerouslySetInnerHTML={{ __html: formatText(m.text) }} />
               )}
-              <pre>{m.text}</pre>
+              {m.image && (
+                <img src={m.image} alt="Seed" className="seed-img" />
+              )}
             </div>
           ))}
           {loading && <div className="msg assistant">Pensando…</div>}

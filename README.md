@@ -90,3 +90,11 @@ Endpoints disponibles:
 ## ✨ Créditos
 Proyecto desarrollado como **MVP de KORA** (onboarding inteligente para empresas).  
 Incluye frontend en React + Vite y backend en FastAPI con RAG sobre OpenAI.
+
+
+
+################### GCS#####################
+
+# Firebase, correr en el frontend
+npm install firebase
+
