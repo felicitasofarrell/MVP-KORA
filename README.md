@@ -85,31 +85,7 @@ Endpoints disponibles:
 - `/ask` → consulta al modelo
 - `/ingest` → reindexar datos
 
----
 
-## 🔑 Variables de entorno
-
-Crea un archivo `.env` dentro de `backend/` con:
-```
-OPENAI_API_KEY=sk-xxxx
-OPENAI_MODEL=gpt-4o-mini
-EMBEDDING_MODEL=text-embedding-3-small
-RAG_TOP_K=6
-CHUNK_SIZE=1000
-CHUNK_OVERLAP=120
-```
-
-*(⚠️ No subir este archivo a GitHub, usar `.env.example` como plantilla).*
-
----
-
-## 📌 Próximos pasos
-- Integrar el frontend con el backend (`/ask`).
-- Subir documentos de Nubceo en `data/raw/`, normalizarlos a YAML en `data/normalized/`.
-- Construir índice FAISS con `/ingest`.
-- Testear preguntas y respuestas desde el chat.
-
----
 
 ## ✨ Créditos
 Proyecto desarrollado como **MVP de KORA** (onboarding inteligente para empresas).  
