@@ -88,8 +88,7 @@ Frontend (React + Vite)
   ↓
 Backend API (FastAPI)
   ├── /ask      → question answering
-  ├── /ingest   → document ingestion
-  └── /health   → service healthcheck
+  └── /ingest   → document ingestion
   ↓
 Retrieval Layer
   ├── normalized documents
