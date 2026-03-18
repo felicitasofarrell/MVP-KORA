@@ -1,96 +1,104 @@
-# 🚀 KORA MVP – Nubceo (Analista CX)
+# KORA MVP — Internal AI Copilot for CX Operations
 
-Este repositorio contiene el **MVP del proyecto KORA**, que incluye:
+> An AI-powered internal assistant designed to help CX teams retrieve operational knowledge faster, reduce dependency on tribal knowledge, and answer internal questions grounded in company documentation.
 
-- **Frontend**: React + Vite (interfaz tipo chat).
-- **Backend**: FastAPI (API con endpoints `/ask`, `/ingest`, `/health`).
-- **Objetivo**: Crear un asistente interno para el puesto **Analista CX** en Nubceo, que responde preguntas basadas en documentación interna usando RAG + OpenAI.
+## Overview
 
----
+KORA is a minimum viable product for an internal AI assistant built for the **Analista CX** role at Nubceo.  
+Its goal is to centralize fragmented internal knowledge and turn it into a fast, conversational support tool for day-to-day operational work.
 
-## 📂 Estructura
+Instead of forcing teams to search across documents, notes, and informal channels, KORA provides a chat-based interface that answers questions using a **Retrieval-Augmented Generation (RAG)** workflow powered by OpenAI.
 
-```
-MVP-KORA/
-├── backend/         → API con FastAPI
-│   ├── app/         → código principal (main.py, routers, services)
-│   ├── requirements.txt
-│   └── .venv/       → entorno virtual (ignorado en Git)
-│
-├── frontend/        → interfaz React + Vite
-│   ├── src/
-│   ├── public/
-│   ├── package.json
-│   ├── vite.config.js
-│   └── README.md    → instrucciones específicas del frontend
-│
-├── docs/            → documentación (alcance, decisiones de diseño)
-├── data/            → raw docs, normalized YAML, índices FAISS
-├── scripts/         → scripts de normalización, chunking, indexado
-├── .gitignore
-└── README.md        → este archivo
-```
+This repository contains the end-to-end MVP, including:
+
+- a **React + Vite frontend** for the chat experience,
+- a **FastAPI backend** exposing the assistant APIs,
+- a **document ingestion pipeline** for normalization and indexing,
+- and the data layer used to support retrieval.
 
 ---
 
-## 🖥️ Frontend (React + Vite)
+## Why this project matters
 
-### Requisitos
-- Node.js (v20 recomendado)
-- npm (incluido con Node)
+Operational teams often rely on:
 
-### Instalación
-```bash
-cd frontend
-npm install
-```
+- scattered documentation,
+- repeated questions across teams,
+- context stored in people's heads instead of systems,
+- slow onboarding for new team members,
+- and inconsistent answers depending on who is available.
 
-### Correr en desarrollo
-```bash
-npm run dev
-```
-La aplicación estará disponible en:  
-👉 [http://localhost:5173](http://localhost:5173)
+KORA addresses that by creating a single assistant capable of answering internal questions grounded in existing documentation.
 
-### Build de producción
-```bash
-npm run build
-npm run preview
-```
+### Core value proposition
+
+- **Faster access to internal knowledge**
+- **Reduced onboarding friction**
+- **Less dependency on informal knowledge holders**
+- **More consistent operational answers**
+- **A foundation for future agentic workflows**
 
 ---
 
-## ⚙️ Backend (FastAPI)
+## What the MVP does
 
-### Requisitos
-- Python 3.10+
-- pip
+The current MVP supports the following flow:
 
-### Instalación
-```bash
-cd backend
-python -m venv .venv
-.venv\Scripts\activate   # En Windows
-pip install -r requirements.txt
-```
+1. Internal documents are collected and normalized.
+2. Content is chunked and indexed for semantic retrieval.
+3. A user asks a question in the chat UI.
+4. The backend retrieves relevant context.
+5. The LLM generates an answer grounded in the retrieved documents.
+6. The response is returned through the frontend.
 
-### Ejecutar servidor
-```bash
-uvicorn app.main:app --reload --port 8000
-```
+### Current capabilities
 
-El backend corre en 👉 [http://127.0.0.1:8000](http://127.0.0.1:8000)  
-Endpoints disponibles:
-- `/health` → estado del servidor
-- `/ask` → consulta al modelo
-- `/ingest` → reindexar datos
+- Chat-style interface for asking operational questions
+- FastAPI backend with API endpoints for querying and ingestion
+- RAG-based answering using internal documentation
+- Document preprocessing and indexing pipeline
+- Modular project structure across frontend, backend, data, and scripts
 
 ---
 
-## ✨ Créditos
-Proyecto desarrollado como **MVP de KORA** (onboarding inteligente para empresas).  
-Incluye frontend en React + Vite y backend en FastAPI con RAG sobre OpenAI.
+## Product vision
 
+While this repository contains an MVP, the broader vision behind KORA is larger:
+
+KORA is intended to evolve from a retrieval assistant into an **operational copilot** capable of:
+
+- guiding onboarding flows,
+- assisting with standard operating procedures,
+- supporting decision-making in internal operations,
+- capturing recurring questions as reusable knowledge,
+- and eventually orchestrating more structured, semi-automated operational workflows.
+
+This MVP is the first step: **reliable access to internal knowledge through a conversational interface**.
+
+---
+
+## Architecture
+
+### High-level architecture
+
+```text
+User
+  ↓
+Frontend (React + Vite)
+  ↓
+Backend API (FastAPI)
+  ├── /ask      → question answering
+  ├── /ingest   → document ingestion
+  └── /health   → service healthcheck
+  ↓
+Retrieval Layer
+  ├── normalized documents
+  ├── chunks
+  └── vector index
+  ↓
+LLM (OpenAI)
+  ↓
+Grounded answer returned to user
 
 
 ################### GCS#####################
