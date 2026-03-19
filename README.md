@@ -2,6 +2,9 @@
 
 Asistente interno impulsado por IA, diseñado para ayudar a equipos de **Customer Experience (CX)** a acceder más rápido al conocimiento operativo, reducir la dependencia del conocimiento informal y responder preguntas internas basadas en documentación de la empresa.
 
+### Landing Page
+[KORA Landing Page](https://koraonboarding.com/)
+
 ## Descripción general
 
 KORA es un **producto mínimo viable (MVP)** de un asistente interno de IA, desarrollado para el rol de **Analista CX** en Nubceo.
